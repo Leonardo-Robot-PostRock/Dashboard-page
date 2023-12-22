@@ -1,5 +1,7 @@
-import { redirect } from 'next/navigation';
-
-export default function Home() {
-	redirect('/dashboard/counter');
+export default function CounterPage() {
+	return (
+		<div>
+			<h1>Page Counter</h1>
+		</div>
+	);
 }
