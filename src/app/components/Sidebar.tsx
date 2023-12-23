@@ -23,7 +23,7 @@ export const Sidebar = () => {
 							alt=''
 						/>
 					</span>
-					<span className='text-sm md:text-base font-bold'>Edward Tompson</span>
+					<span className='text-sm md:text-base font-bold'>Leonardo Puebla</span>
 				</a>
 			</div>
 			<div id='nav' className='w-full px-6'>
