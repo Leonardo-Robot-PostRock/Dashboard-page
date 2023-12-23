@@ -5,7 +5,7 @@ import { SidebarMenuItem } from './SidebarMenuItem';
 const menuItems = [
 	{
 		path: '/dashboard/main',
-		icon: <IoBrowsersOutline />,
+		icon: <IoBrowsersOutline size={40}/>,
 		title: 'Dashboard',
 		subTitle: 'Visualización',
 	},
