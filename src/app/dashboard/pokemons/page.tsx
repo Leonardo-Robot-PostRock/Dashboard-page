@@ -17,7 +17,7 @@ const getPokemons = async ( limit = 20, offset = 0 ): Promise<SimplePokemon[]> =
 
 
 export default async function PokemonsPage() {
-  const pokemons = await getPokemons(151);
+  const pokemons = await getPokemons(300);
   
 
   return (
