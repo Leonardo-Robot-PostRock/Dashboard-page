@@ -16,6 +16,8 @@ const getPokemons = async (
     name: pokemon.name,
   }));
 
+  // throw new Error('Esto es un error que no debería de suceder');
+
   return pokemons;
 };
 
