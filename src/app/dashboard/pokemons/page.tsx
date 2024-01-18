@@ -1,7 +1,4 @@
-import { SimplePokemon } from '../../pokemons/interfaces/simple-pokemon';
-import { PokemonsResponse } from '../../pokemons/interfaces/pokemons-response';
-import Image from 'next/image';
-import { PokemonGrid } from '../../pokemons/components/PokemonGrid';
+import { PokemonGrid, PokemonsResponse, SimplePokemon } from '@/pokemons';
 
 const getPokemons = async (
   limit = 20,
@@ -27,7 +24,7 @@ export default async function PokemonsPage() {
   return (
     <div className='flex flex-col'>
       <span className='text-5xl my-2'>
-        Listade de Pokémons <small>estático</small>
+        Lista de Pokémons <small>estático</small>
       </span>
       <div className='flex flex-wrap gap-10 items-center justify-center'>
         <PokemonGrid pokemons={pokemons} />
