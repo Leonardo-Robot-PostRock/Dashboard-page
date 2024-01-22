@@ -15,7 +15,10 @@ export const PokemonCard = ({ pokemon }: Props) => {
       <div className='flex flex-col bg-white rounded overflow-hidden shadow-lg'>
         <div className='flex flex-col items-center justify-center text-center p-6 bg-gray-800 border-b'>
           <Image
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`}
+            src={
+              `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg` ||
+              `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`
+            }
             priority={false}
             width={100}
             height={100}
