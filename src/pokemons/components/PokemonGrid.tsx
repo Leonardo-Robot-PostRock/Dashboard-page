@@ -2,7 +2,7 @@ import { SimplePokemon } from '../interfaces/simple-pokemon';
 import { PokemonCard } from './PokemonCard';
 
 interface Props {
-  pokemons: SimplePokemon;
+  pokemons: SimplePokemon[];
 }
 
 export const PokemonGrid = ({ pokemons }: Props) => {
