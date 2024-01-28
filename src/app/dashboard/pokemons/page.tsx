@@ -8,7 +8,7 @@ const getPokemons = async (
     `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
   ).then((res) => res.json());
 
-  const pokemons = data.results.map((pokemon) => ({
+  const pokemons: SimplePokemon[] = data.results.map((pokemon) => ({
     id: pokemon.url.split('/').at(-2)!,
     name: pokemon.name,
   }));
@@ -19,7 +19,7 @@ const getPokemons = async (
 };
 
 export default async function PokemonsPage() {
-  const pokemons = await getPokemons(300);
+  const pokemons: SimplePokemon[] = await getPokemons(300);
 
   return (
     <div className='p-2 flex flex-col'>
