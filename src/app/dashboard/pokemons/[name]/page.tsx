@@ -40,11 +40,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export const metada = {
-  title: '151 Pokemons',
-  description: 'Se muestran a continuación 151 pokemons',
-};
-
 const getPokemon = async (name: string): Promise<Pokemon> => {
   try {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`, {
