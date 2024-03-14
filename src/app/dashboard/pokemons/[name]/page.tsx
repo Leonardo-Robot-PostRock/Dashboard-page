@@ -24,9 +24,10 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { id, name } = await getPokemon(params.name);
 
   try {
+    const { id, name } = await getPokemon(params.name);
+
     return {
       title: `#${id} - ${name}`,
       description: `Página del pokémon ${name}`,
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const getPokemon = async (name: string): Promise<Pokemon> => {
   try {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`, {
-      cache: 'force-cache',
+      // cache: 'force-cache',
       next: {
         revalidate: 60 * 60 * 30 * 6,
       },
