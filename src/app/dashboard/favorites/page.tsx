@@ -1,11 +1,11 @@
 import { FavouritesPokemons } from '@/pokemons';
 
-export const metada = {
+export const metadata = {
   title: 'Favoritos',
   description: 'Se muestran a continuación 151 pokemons',
 };
 
-export default async function PokemonsPage() {
+export default function PokemonsPage() {
 
   return (
     <div className='p-2 flex flex-col'>
