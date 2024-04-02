@@ -12,7 +12,7 @@ export default async function PokemonsPage() {
         Pokémons favoritos <small>Global state</small>
       </span>
       <div className='flex flex-wrap gap-10 items-center justify-center'>
-        <PokemonGrid pokemons={{}} />
+        <PokemonGrid pokemons={[]} />
       </div>
     </div>
   );
