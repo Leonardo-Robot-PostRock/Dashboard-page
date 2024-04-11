@@ -13,7 +13,7 @@ interface PokemonState {
 }
 
 const initialState: PokemonState = {
-    '1': { id: '1', name: 'pikachu' }
+    // '1': { id: '1', name: 'pikachu' }
 }
 
 const pokemonSlice = createSlice({
