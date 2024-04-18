@@ -34,3 +34,26 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+#Notas:
+Este state evita errores al cargar un estado que puede entrar en conflicto con lo que
+tiene Next del lado del servidor con el lado del cliente
+
+>Store:
+
+```
+    interface PokemonState {
+        favourites: { [key: string]: SimplePokemon };
+    }
+
+    const initialState: PokemonState = {
+        favourites: {}
+    }
+
+    setFavouritePokemons(state, action: PayloadAction<{ [key: string]: SimplePokemon }>) {
+        state.favourites = action.payload;
+    },
+```
+
+En aplicaciones Next.js, es común utilizar el renderizado del lado del servidor (SSR) para la primera carga de la página y el renderizado del lado del cliente (CSR) para las interacciones posteriores del usuario. En algunas situaciones, podría haber discrepancias entre el estado inicial que se carga del lado del servidor y el estado que se maneja del lado del cliente. Definir un estado inicial explícito en el slice de Redux ayuda a mitigar estos posibles errores al proporcionar un estado consistente y predecible para la aplicación en ambos lados (servidor y cliente).
