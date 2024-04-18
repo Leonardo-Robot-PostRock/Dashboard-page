@@ -1,17 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { SimplePokemon } from "@/pokemons";
 
-const getInitialState = (): PokemonState => {
-    const favourites = JSON.parse(localStorage.getItem('favourite-pokemons') ?? '{}')
-    return favourites;
-}
+// const getInitialState = (): PokemonState => {
+//     const favourites = JSON.parse(localStorage.getItem('favourite-pokemons') ?? '{}')
+//     return favourites;
+// }
 
 interface PokemonState {
     [key: string]: SimplePokemon;
 }
 
 const initialState: PokemonState = {
-    ...getInitialState(),
+    // ...getInitialState(),
 }
 
 const pokemonSlice = createSlice({
